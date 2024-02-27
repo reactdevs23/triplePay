@@ -5,6 +5,8 @@ import clsx from "clsx";
 const Text = ({
   primaryDefault,
   base0,
+  base600,
+  base900,
   color,
   xs,
   sm,
@@ -33,6 +35,8 @@ const Text = ({
         classes.text,
         primaryDefault && classes.primaryDefault,
         base0 && classes.base0,
+        base600 && classes.base600,
+        base900 && classes.base900,
         xs && classes.xs,
         sm && classes.sm,
         md && classes.md,

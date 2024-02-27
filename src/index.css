@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&display=swap");
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -8,6 +9,7 @@
 :root {
   --Base-0: #ffffff;
   --Base-900: #000;
+  --Base-600: #4b5563;
   --Primary-Default: #7c66ff;
   --Green-Bg: linear-gradient(140deg, #02c567 0%, #00aa58 100%);
 }
@@ -17,7 +19,6 @@ body {
 
   overflow-x: hidden;
   scroll-behavior: smooth;
-  background: var(--Base-500);
 }
 
 h1,
@@ -51,8 +52,12 @@ button:hover {
   margin: 0 auto;
 }
 .paddingTop {
-  padding-top: 130px;
-  padding-bottom: 50px;
+  padding-top: 140px;
+}
+@media only screen and (max-width: 991px) {
+  .paddingTop {
+    padding-top: 110px;
+  }
 }
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -88,4 +93,10 @@ input[type="number"] {
   border-radius: 100vh;
   border: none;
   border-radius: 5px;
+}
+.splide__pagination {
+  bottom: -40px !important;
+}
+.splide__pagination__page {
+  background: var(--Primary-Default) !important;
 }

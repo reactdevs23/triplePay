@@ -12,7 +12,12 @@
 .base0 {
   color: var(--Base-0);
 }
-
+.base600 {
+  color: var(--Base-600);
+}
+.base900 {
+  color: var(--Base-900);
+}
 .textLeft {
   text-align: left;
 }
@@ -53,7 +58,7 @@
   font-weight: 700;
 }
 .semiBold {
-  font-weight: 500;
+  font-weight: 600;
 }
 .wFull {
   width: 100%;
@@ -85,6 +90,18 @@
   .mobileCenter {
     text-align: center;
   }
+  .xl {
+    font-size: 16px;
+  }
+  .xl2 {
+    font-size: 20px;
+  }
+  .xl3 {
+    font-size: 22px;
+  }
+  .lg {
+    font-size: 14px;
+  }
 }
 @media only screen and (max-width: 520px) {
   .md {
@@ -94,10 +111,10 @@
     font-size: 16px;
   }
   .xl2 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .xl3 {
-    font-size: 24px;
+    font-size: 22px;
   }
   .lg {
     font-size: 15px;

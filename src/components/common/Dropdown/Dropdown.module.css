@@ -2,13 +2,11 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 5px;
   cursor: pointer;
 }
 .styledDropdown {
   padding: 15px 0;
-  border-top: 1px solid var(--Base-200);
-  border-bottom: 1px solid var(--Base-200);
 }
 .dropdownMain {
   min-width: calc(100% + 36px);
@@ -18,17 +16,16 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: calc(100% + 24px);
+  top: calc(100% + 5px);
   z-index: 2;
   opacity: 0;
   pointer-events: none;
   transition: 0.4s ease-in-out;
-  background-color: var(--Base-400);
-  border: 1px solid var(--Base-200);
+  background-color: var(--Green-Bg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .selectedValue {
-  text-transform: uppercase;
   width: 100%;
   color: var(--Base-0);
   font-size: 18px;
@@ -41,7 +38,7 @@
   cursor: pointer;
   color: inherit;
   margin-left: auto;
-  color: var(--Base-100);
+  color: var(--Base-0);
 }
 
 .dropdownMain.active {
@@ -50,7 +47,12 @@
   opacity: 1;
   pointer-events: all;
 }
+.list {
+  display: flex;
+  flex-direction: column;
 
+  background: var(--Green-Bg);
+}
 .listItem {
   padding: 8px 24px;
   padding-top: 10px;
@@ -69,11 +71,11 @@
 
 .listItem.active,
 .listItem:hover {
-  background-color: var(--PrimaryDefault);
+  background-color: var(--Primary-Default);
   color: var(--Base-0);
 }
 .listItem:hover {
-  background-color: var(--Base-300);
+  background: rgba(255, 255, 255, 0.1);
   color: var(--Base-0);
 }
 .lightTheme .listItem.active {

@@ -8,10 +8,9 @@
 }
 
 .btn.md {
-  height: 48px;
+  height: auto;
   padding: 12px 20px;
   border-radius: 8px;
-  gap: 10px;
   font-size: 16px;
   font-weight: 500;
 }
@@ -27,14 +26,14 @@
 
 .btn {
   background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   border: 0px;
   cursor: pointer;
   transition: 0.4s ease;
   text-align: center;
   font-size: 14px;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px 0px rgba(3, 7, 18, 0.05);
 }
 
 .btn:hover {
@@ -42,7 +41,7 @@
 }
 
 .btn.btnPrimary {
-  color: var(--Primary-Content);
+  color: var(--Base-0);
 
   background: var(--Primary-Default);
 }
@@ -62,4 +61,10 @@
 
 .mlAuto {
   margin-left: auto;
+}
+@media only screen and (max-width: 991px) {
+  .btn.md {
+    font-size: 14px;
+    padding: 11px 18px;
+  }
 }

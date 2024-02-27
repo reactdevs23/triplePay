@@ -3,12 +3,13 @@ import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 
 import classes from "./Dropdown.module.css";
 import useOnClickOutside from "../../../hooks/useOnClickOutside";
+import { Link } from "react-router-dom";
 
 const Dropdown = ({
   dropdownRef,
   isActive,
   setActive,
-  selectedValue,
+  label,
   onSelect,
   children,
   dropdownItems,
@@ -31,7 +32,7 @@ const Dropdown = ({
       }}
     >
       <>
-        <p className={classes.selectedValue}>{selectedValue}</p> {children}
+        <p className={classes.selectedValue}>{label}</p> {children}
         {isActive ? (
           <FaAngleUp className={classes.icon} />
         ) : (
@@ -43,18 +44,16 @@ const Dropdown = ({
         <div className={classes.list}>
           {dropdownItems.map((el, idx) => {
             return (
-              <div
+              <Link
+                to={`/${el}`}
                 key={"item" + idx}
-                className={clsx(
-                  classes.listItem,
-                  selectedValue === el && classes.active
-                )}
+                className={clsx(classes.listItem)}
                 onClick={() => {
                   onSelect(el);
                 }}
               >
                 {el}
-              </div>
+              </Link>
             );
           })}
         </div>

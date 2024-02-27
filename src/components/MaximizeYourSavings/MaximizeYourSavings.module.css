@@ -1,0 +1,143 @@
+.mainWrapper {
+  background: linear-gradient(140deg, #7c66ff 0%, #593dff 100%);
+}
+.wrapper {
+  padding-top: 100px;
+  padding: 160px 0;
+  position: relative;
+  z-index: 1;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 20px;
+  padding-top: 60px;
+}
+.heading {
+  color: var(--Primary-Default);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  white-space: nowrap;
+}
+.circle {
+  background: var(--Primary-Default);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+.bgImg {
+  position: absolute;
+  width: 60%;
+  top: 20%;
+  right: 0;
+  z-index: -1;
+  max-height: 486px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.leftSide {
+  max-width: 449px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.learnMore {
+  display: flex;
+
+  gap: 8px;
+  color: var(--Base-0);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 155.556%;
+  cursor: pointer;
+}
+.arrow {
+  font-size: 20px;
+  color: var(--Base-0);
+}
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(3, 7, 18, 0.06);
+  backdrop-filter: blur(24px);
+}
+.rightSide {
+  max-width: 591px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.icon {
+  min-width: 60px;
+  max-width: 60px;
+  width: 100%;
+}
+@media only screen and (max-width: 1199px) {
+  .card {
+    padding: 18px;
+  }
+  .icon {
+    max-width: 50px;
+    min-width: 50px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .wrapper {
+    padding: 80px 0;
+  }
+  .container {
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 50px;
+  }
+  .leftSide,
+  .rightSide {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .leftSide {
+    gap: 15px;
+  }
+  .bgImg {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .icon {
+    max-width: 40px;
+    min-width: 40px;
+    margin-top: 3px;
+  }
+  .card,
+  .infoContainer {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .heading {
+    font-size: 35px;
+  }
+}

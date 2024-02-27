@@ -11,10 +11,12 @@
   background: transparent;
   transition: 0.3s;
   padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--Green-Bg);
 }
 .wrapperBg {
   background: var(--Green-Bg);
-  box-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
 }
 .header {
   display: flex;
@@ -28,17 +30,7 @@
   align-items: center;
   gap: 12px;
 }
-.logoText {
-  color: var(--Base-0);
-  text-align: center;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 133.333%;
-}
-.logoText span {
-  font-weight: 700;
-}
+
 .navItems {
   display: flex;
   align-items: center;
@@ -66,18 +58,20 @@
 @media only screen and (max-width: 991px) {
   .navItems {
     flex-direction: column;
-    gap: 40px;
+    gap: 24px;
     min-height: 100vh;
-    background: #041819;
+    background: var(--Green-Bg);
     transform: translateX(250%);
     transition: 0.3s;
     position: fixed;
-    top: 80px;
+    top: calc(100% + 1px);
     right: 0;
-    padding-top: 50px;
+    padding-top: 30px;
     max-width: 320px;
     width: 100%;
     min-height: 100vh;
+
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
   }
   .sidebar {
     transform: translateX(0);
@@ -95,11 +89,16 @@
     font-size: 28px;
   }
 }
-@media only screen and (max-width: 450px) {
-  .wallet {
-    display: none;
+@media only screen and (max-width: 520px) {
+  .logo {
+    max-width: 100px;
   }
-  .logoText {
-    font-size: 16px;
+  .buttonContainer .button {
+    padding: 8px 12px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .waitingList {
+    display: none;
   }
 }

@@ -8,6 +8,7 @@ const SectionHeading = ({
   left,
   textCenter,
   mobileCenter,
+  base900,
 }) => {
   return (
     <h2
@@ -15,7 +16,8 @@ const SectionHeading = ({
         classes.heading,
         className,
         left && classes.left,
-        mobileCenter && classes.mobileCenter
+        mobileCenter && classes.mobileCenter,
+        base900 && classes.base900
       )}
     >
       {children}

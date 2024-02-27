@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { IoMdClose } from "react-icons/io";
 import { AiOutlineAlignRight } from "react-icons/ai";
 import classes from "./Navbar.module.css";
@@ -6,14 +6,12 @@ import classes from "./Navbar.module.css";
 import { Link } from "react-router-dom";
 import { logo } from "../../images";
 import Button from "../common/Button/Button";
+import Dropdown from "../common/Dropdown/Dropdown";
 
 const Navbar = () => {
-  const navItems = [
-    { navItem: "Features", to: "features" },
-    { navItem: "Presale Alerts", to: "presale-alerts" },
-    { navItem: "Networks", to: "networks" },
-    { navItem: "About us", to: "about-us" },
-  ];
+  const dropDownRef = useRef(null);
+  const [isDropdownActive, setIsDropdownActive] = useState(false);
+  const dropdownRoutes = ["service1", "service2", "service3"];
   const [sidebar, setSidebar] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -48,25 +46,48 @@ const Navbar = () => {
         <div
           className={[classes.navItems, sidebar && classes.sidebar].join(" ")}
         >
-          {navItems.map((el, i) => (
-            <Link
-              key={i}
-              className={classes.navItem}
-              to={el.to}
-              onClick={() => setSidebar((prev) => !prev)}
-            >
-              {el.navItem}
-            </Link>
-          ))}
+          <Link
+            className={classes.navItem}
+            to="/campaign"
+            onClick={() => setSidebar((prev) => !prev)}
+          >
+            Campaign
+          </Link>
+          <div ref={dropDownRef}>
+            <Dropdown
+              label="Service"
+              isActive={isDropdownActive}
+              setActive={setIsDropdownActive}
+              onSelect={(val) => {
+                setIsDropdownActive(false);
+              }}
+              dropdownItems={dropdownRoutes}
+              dropdownRef={dropDownRef}
+            />
+          </div>
+          <Link
+            className={classes.navItem}
+            to="/newsAndBlog"
+            onClick={() => setSidebar((prev) => !prev)}
+          >
+            News & Blog
+          </Link>{" "}
+          <Link
+            className={classes.navItem}
+            to="/help"
+            onClick={() => setSidebar((prev) => !prev)}
+          >
+            Help
+          </Link>
         </div>
         <div className={classes.buttonContainer}>
           <Button
             btnPrimary
-            size="sm"
+            size="md"
             onClick={() => {}}
             className={classes.button}
           >
-            Connect<span className={classes.wallet}>Wallet</span>
+            Join <span className={classes.waitingList}>Waiting List</span>
           </Button>
           {sidebar ? (
             <IoMdClose
