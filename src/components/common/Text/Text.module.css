@@ -1,0 +1,105 @@
+.text {
+  color: var(--Base-0);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.primaryDefault {
+  color: var(--Primary-Default);
+}
+
+.base0 {
+  color: var(--Base-0);
+}
+
+.textLeft {
+  text-align: left;
+}
+.warning {
+  color: var(--Warning-Default);
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+.mlAuto {
+  margin-left: auto;
+}
+
+.xs {
+  font-size: 12px;
+}
+.sm {
+  font-size: 14px;
+}
+.md {
+  font-size: 16px;
+}
+.xl {
+  font-size: 20px;
+}
+.xl2 {
+  font-size: 24px;
+}
+.xl3 {
+  font-size: 30px;
+}
+.lg {
+  font-size: 18px;
+}
+.bold {
+  font-weight: 700;
+}
+.semiBold {
+  font-weight: 500;
+}
+.wFull {
+  width: 100%;
+}
+.textCenter {
+  text-align: center;
+}
+.textRight {
+  text-align: right;
+}
+.upperCase {
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 1199px) {
+  .xl {
+    font-size: 18px;
+  }
+  .xl2 {
+    font-size: 22px;
+  }
+  .xl3 {
+    font-size: 26px;
+  }
+  .lg {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .mobileCenter {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .md {
+    font-size: 14px;
+  }
+  .xl {
+    font-size: 16px;
+  }
+  .xl2 {
+    font-size: 20px;
+  }
+  .xl3 {
+    font-size: 24px;
+  }
+  .lg {
+    font-size: 15px;
+  }
+}

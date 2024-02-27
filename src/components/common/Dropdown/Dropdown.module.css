@@ -1,0 +1,93 @@
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+.styledDropdown {
+  padding: 15px 0;
+  border-top: 1px solid var(--Base-200);
+  border-bottom: 1px solid var(--Base-200);
+}
+.dropdownMain {
+  min-width: calc(100% + 36px);
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(100% + 24px);
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s ease-in-out;
+  background-color: var(--Base-400);
+  border: 1px solid var(--Base-200);
+}
+
+.selectedValue {
+  text-transform: uppercase;
+  width: 100%;
+  color: var(--Base-0);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 155.556%;
+}
+
+.icon {
+  cursor: pointer;
+  color: inherit;
+  margin-left: auto;
+  color: var(--Base-100);
+}
+
+.dropdownMain.active {
+  overflow: auto;
+  height: auto;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.listItem {
+  padding: 8px 24px;
+  padding-top: 10px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  white-space: nowrap;
+  color: var(--Base-0);
+  text-transform: uppercase;
+  width: 100%;
+  color: var(--Base-0);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 155.556%;
+}
+
+.listItem.active,
+.listItem:hover {
+  background-color: var(--PrimaryDefault);
+  color: var(--Base-0);
+}
+.listItem:hover {
+  background-color: var(--Base-300);
+  color: var(--Base-0);
+}
+.lightTheme .listItem.active {
+  color: var(--Base-0);
+}
+.lightTheme .listItem:hover {
+  background-color: var(--PrimaryDefault);
+  color: var(--Base-0);
+}
+@media only screen and (max-width: 520px) {
+  .selectedValue {
+    font-size: 14px;
+  }
+  .listItem {
+    font-size: 13px;
+  }
+}
